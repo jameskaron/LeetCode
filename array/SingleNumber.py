@@ -27,13 +27,18 @@ class Solution:
     def singleNumber_three(self, nums: list) -> int:
         return 2 * sum(set(nums)) - sum(nums)
 
-    # 位操作
+    # 位操作:XOR a⊕b⊕a = (a⊕a)⊕b = 0⊕b = b
     def singleNumber_four(self, nums: list) -> int:
-        
+        a = 0
+        for i in nums:
+            a ^= i
+        return a
+
 
 s = Solution()
 data = [2, 2, 1]
 # resp = s.singleNumber_one(data)
 # resp = s.singleNumber_two(data)
-resp = s.singleNumber_three(data)
+# resp = s.singleNumber_three(data)
+resp = s.singleNumber_four(data)
 print(resp)
