@@ -1,3 +1,4 @@
+# 只出现一次的数字
 class Solution:
     # 列表操作
     def singleNumber_one(self, nums: list) -> int:
@@ -36,7 +37,8 @@ class Solution:
 
 
 s = Solution()
-data = [2, 2, 1]
+# data = [2, 2, 1]
+data = [4,1,2,1,2]
 # resp = s.singleNumber_one(data)
 # resp = s.singleNumber_two(data)
 # resp = s.singleNumber_three(data)
