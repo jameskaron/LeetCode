@@ -1,8 +1,7 @@
 # 方法：双指针法
 def remove_duplicates(nums: list) -> list:
     i = 0
-    result = []
-    result.append(nums[i])
+    res = [nums[i]]
     for j in range(1, len(nums)):
         if nums[j] != nums[i]:
             i += 1

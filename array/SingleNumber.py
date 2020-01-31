@@ -38,7 +38,7 @@ class Solution:
 
 s = Solution()
 # data = [2, 2, 1]
-data = [4,1,2,1,2]
+data = [4, 1, 2, 1, 2]
 # resp = s.singleNumber_one(data)
 # resp = s.singleNumber_two(data)
 # resp = s.singleNumber_three(data)
