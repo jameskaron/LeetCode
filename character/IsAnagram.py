@@ -11,5 +11,23 @@
 # 进阶:
 # 如果输入字符串包含 unicode 字符怎么办？你能否调整你的解法来应对这种情况？
 
+import collections
+
 class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
+    # 排序法
+    def isAnagram_one(self, s: str, t: str) -> bool:
+        s = sorted(s)
+        t = sorted(t)
+        if s == t:
+            return True
+        return False
+
+    # 方法二：哈希表
+    # def isAnagram_two(self, s: str, t: str) -> bool:
+
+
+
+sol = Solution()
+string = "anagram"
+target = "nagaram"
+print(sol.isAnagram_one(string, target))
