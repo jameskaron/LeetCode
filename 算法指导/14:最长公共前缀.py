@@ -16,8 +16,32 @@
 # 所有输入只包含小写字母 a-z 。
 
 class Solution(object):
+    # index
     def longestCommonPrefix(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
+        if len(strs) < 1:
+            return ""
+
+        prefix = strs[0]
+        for k in strs[1:]:
+            while True:
+                try:
+                    k.index(prefix)
+                    break
+                except:
+                    if len(prefix) == 0:
+                        return ""
+                    prefix = prefix[:len(prefix) - 1]
+        return prefix
+
+
+if __name__ == '__main__':
+    s = Solution()
+    strs = ["flower", "flow", "flight"]
+    strs1 = ["dog", "racecar", "car"]
+    strs2 = ["c", "acc", "ccc"]
+    # assert s.longestCommonPrefix(strs) == 'fl'
+    # assert s.longestCommonPrefix(strs1) == ''
+    # TODO: error
+    assert s.longestCommonPrefix(strs2) == ''
+
+

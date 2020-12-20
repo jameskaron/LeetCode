@@ -28,6 +28,7 @@ class Solution:
 
         return intersection
 
+    # 双指针法
     def intersect2(self, num1: List[int], num2: List[int]):
         num1 = sorted(num1)
         num2 = sorted(num2)
